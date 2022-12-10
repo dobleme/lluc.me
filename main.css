@@ -68,12 +68,75 @@ a {
 .contact {
   justify-self: center;
   margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .contact code {
   font-family: 'JetBrains Mono';
   font-weight: 500;
   font-size: 13px;
+}
+
+.border {
+  position: relative;
+  z-index: 10;
+}
+
+.border:before,
+.border:after {
+  background: #448361;
+  content: '';
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  width: 1.2rem;
+}
+
+.border:before {
+  left: 0;
+}
+
+.border:after {
+  right: 0;
+}
+
+.border__horizontal:before,
+.border__horizontal:after {
+  background: #448361;
+  content: '';
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 1.2rem;
+}
+
+.border__horizontal:before {
+  top: 0;
+}
+
+.border__horizontal:after {
+  bottom: 0;
+}
+
+abbr {
+  font-style: italic;
+  position: relative
+}
+
+abbr:hover::after {
+  font-size: 9pt;
+  color: white;
+  background: #448361;
+  bottom: 110%;
+  content: attr(title);
+  display: block;
+  left: 80%;
+  padding: 0.7rem;
+  position: absolute;
+  width: 14rem;
+  letter-spacing: -0.07rem;
+  z-index: 1;
+
 }
 
 @media (max-width: 900px) {
