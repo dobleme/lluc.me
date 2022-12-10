@@ -1,0 +1,101 @@
+body {
+  font-family: 'Overpass Mono', monospace;
+}
+
+main {
+  display: grid;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.green {
+  color: #448361;
+}
+
+.black {
+  color: #000;
+  font-weight: 800;
+}
+
+.hello {
+  justify-self: center;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+}
+
+.hello .avatar {
+  max-width: 220px;
+  max-height: auto;
+}
+
+.hello .title {
+  display: flex;
+  flex-direction: column;
+  margin-left: 60px;
+  margin-bottom: 0;
+}
+
+.hello .me {
+  font-size: 40pt;
+  font-weight: 600;
+  letter-spacing: -0.2rem;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.hello .experience {
+  font-size: 13pt;
+}
+
+.description {
+  margin-top: 60px;
+  justify-self: center;
+  max-width: 900px;
+  line-height: 1.9em;
+}
+
+.description .divider {
+  margin-top: 100px;
+  height: 1px;
+  background-color: #000;
+  opacity: 40%;
+}
+
+.contact {
+  justify-self: center;
+  margin-top: 20px;
+}
+
+.contact code {
+  font-family: 'JetBrains Mono';
+  font-weight: 500;
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .avatar {
+    display: none;
+  }
+
+  .hello .title {
+    margin-left: 0;
+  }
+
+  .hello .me {
+    font-size: 24pt;
+  }
+
+  .description,
+  .contact {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+
+  .contact code {
+    font-size: 10px;
+  }
+}
