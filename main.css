@@ -1,3 +1,8 @@
+:root {
+  --primary-color: #448361;
+  --secondary-color: #000;
+}
+
 body {
   font-family: 'Overpass Mono', monospace;
 }
@@ -12,11 +17,11 @@ a {
 }
 
 .green {
-  color: #448361;
+  color: var(--primary-color);
 }
 
 .black {
-  color: #000;
+  color: var(--secondary-color);
   font-weight: 800;
 }
 
@@ -61,7 +66,7 @@ a {
 .divider {
   margin-top: 100px;
   height: 1px;
-  background-color: #000;
+  background-color: var(--secondary-color);
   opacity: 40%;
 }
 
@@ -84,7 +89,7 @@ a {
 
 .border:before,
 .border:after {
-  background: #448361;
+  background: var(--primary-color);
   content: '';
   position: fixed;
   bottom: 0;
@@ -102,7 +107,7 @@ a {
 
 .border__horizontal:before,
 .border__horizontal:after {
-  background: #448361;
+  background: var(--primary-color);
   content: '';
   position: fixed;
   left: 0;
@@ -126,7 +131,7 @@ abbr {
 abbr:hover::after {
   font-size: 9pt;
   color: white;
-  background: #448361;
+  background: var(--primary-color);
   bottom: 110%;
   content: attr(title);
   display: block;
