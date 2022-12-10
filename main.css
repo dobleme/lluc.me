@@ -145,7 +145,7 @@ abbr:hover::after {
 }
 
 @media (max-width: 900px) {
-  .avatar {
+  .hello__avatar {
     display: none;
   }
 
