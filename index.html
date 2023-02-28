@@ -3,8 +3,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overpass+Mono">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=JetBrains+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=M+PLUS+1+Code">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
@@ -13,34 +13,32 @@
 
   <body>
     <main>
-      <div class="hello">
-        <img class="hello__avatar" alt="Avatar" src="avatarbigsmile.png">
-        <div class="hello__title">
-          <p class="title__me"><abbr title="Uep is the way we salut in Mallorca">Uep</abbr>, I'm <span class="green">Lluc</span><br>I'm a <span class="green">Backend</span> dev</p>
-          <p class="title__experience">I have 7 years of experience</p>
-        </div>
-      </div>
+      <div class="container">
+          <div class="hello">
+            <div class="hello__avatar">
+              <img alt="Me" src="avatarbigsmile.png">
+            </div>
+            <div class="hello__title">
+              <h1 class="title__me">Uep, I'm Lluc 👋</h1>
+              <div class="title__links">
+                <a href="mailto:dev@lluc.me?Subject=Lets%20talk"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/llucmartorell" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
 
-      <div class="description">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum similique dignissimos quis eligendi esse. Doloribus id aliquam nemo nobis obcaecati rem? Voluptatem blanditiis provident perferendis. Enim necessitatibus aliquid quibusdam dolorum.</p>
-        <div class="divider"></div>
-      </div>
-
-      <div class="contact">
-<pre><code class="contact__link">
-def <span class="black">resume</span>():
-  return <a class="black" href="https://dobleme.notion.site/3305a292d0054ced9a8e3d90a8f95c62" target="_blank">Link(<span class="green">'resume'</span>)</a>
-</code></pre>
-
-<pre><code class="contact__link">
-def <span class="black">contact_me</span>():
-  return <a class="black" href="https://linkedin.com/in/llucmartorell" target="_blank">Link(<span class="green">'linked_in'</span>)</a>, <a class="black" href="mailto: dev@lluc.me">Mail(<span class="green">'dev@lluc.me'</span>)</a>
-</code></pre>
+          <div class="description">
+            <p>I'm a <strong>Backend</strong> developer based at Mallorca 🏝️. I love to write and talk about code and the seek for simple solutions.</p>
+            <p>I've been in the industry for around <strong><span id="exp"></span> years</strong> 🧪. Nowadays, I work at <strong>Metro Markets</strong>, but I worked also at OmniAccess, Habitissimo and as a freelance.</p>
+            <p class="description__resume">Check out my <a href="https://dobleme.notion.site/3305a292d0054ced9a8e3d90a8f95c62" target="_blank">resume 📄</a></p>
+          </div>
       </div>
     </main>
 
-    <div class="border" aria-hidden="true">
-      <div class="border__horizontal"></div>
-    </div>
+    <script>
+      const actualYear = new Date().getFullYear();
+      const workingYears = actualYear - 2015;
+      document.getElementById("exp").textContent = workingYears;
+    </script>
   </body>
 </html>
